@@ -1,4 +1,4 @@
-/* Force black background and white text across the entire page */
+/* Global Styles */
 html, body {
     height: 100%;
     background-color: #000000 !important;
@@ -8,7 +8,7 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-/* Custom BMW Font */
+/* Font */
 @font-face {
     font-family: 'ZenAntiqueSoft';
     src: url('assets/fonts/ZenAntiqueSoft-Regular.ttf') format('truetype');
@@ -16,36 +16,30 @@ html, body {
     font-style: normal;
 }
 
-/* Header Section */
+/* Header */
 header {
     background-color: #000000 !important;
     color: #f0f0f0 !important;
     position: relative;
-    padding: 10px 0;
+    padding: 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 40px;
-    padding-right: 40px;
 }
 
-/* Brand name in header */
 .brand-name {
     font-size: 2rem;
     color: #f0f0f0 !important;
 }
 
-/* Navigation links */
 nav .nav-link {
-    color: white !important;  /* Set the color of the navbar text */
+    color: white !important;  
 }
 
-/* Ensure navbar links change color on hover */
 nav .nav-link:hover {
-    color: blue !important;  /* Optional: Darker shade when hovered */
+    color: blue !important;  
 }
 
-/* Position the logo at the top-left corner */
 .brand-logo {
     height: 60px;
     width: auto;
@@ -54,7 +48,6 @@ nav .nav-link:hover {
     left: 40px;
 }
 
-/* Style the BMW text */
 .brand-heading {
     font-family: 'ZenAntiqueSoft', serif;
     font-size: 4rem;
@@ -65,7 +58,7 @@ nav .nav-link:hover {
     margin-bottom: 15px;
 }
 
-/* Hero Section Video */
+/* Hero Section */
 .hero {
     position: relative;
     height: 100vh;
@@ -91,7 +84,6 @@ nav .nav-link:hover {
     pointer-events: none;
 }
 
-/* Optional: darken video with overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -102,7 +94,6 @@ nav .nav-link:hover {
     z-index: 1;
 }
 
-/* Hero content container including video squares */
 .hero .container-fluid {
     position: relative;
     z-index: 2;
@@ -110,7 +101,6 @@ nav .nav-link:hover {
     color: white;
 }
 
-/* Hero texts */
 .brand-heading {
     font-family: 'ZenAntiqueSoft', serif;
     font-size: 4rem;
@@ -124,37 +114,33 @@ nav .nav-link:hover {
     margin-bottom: 30px;
 }
 
-/* Each video box - updated 10% larger + 10% more spacing */
+/* Video Squares */
 .video-square {
     aspect-ratio: 1 / 1;
-    height: 180px; /* 10% bigger than 160px */
+    height: 180px; 
     width: 176px;
     border-radius: 20px;
     overflow: hidden;
     background-color: #111;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-    margin-bottom: 40px; /* 10% more spacing */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    margin-bottom: 40px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-/* Hover effect for zoom */
 .video-square:hover {
-    transform: scale(1.2); /* Zooms in */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Glow effect */
+    transform: scale(1.2); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); 
 }
 
-/* Disable hover effect when right-click occurs */
 .video-square.no-hover:hover {
-    transform: none; /* Disable hover zoom */
-    box-shadow: none; /* Disable hover glow effect */
+    transform: none; 
+    box-shadow: none; 
 }
 
-/* Ensure the last video in each column doesn't have extra bottom space */
 .video-square:last-child {
     margin-bottom: 0;
 }
 
-/* Inside video sizing */
 .video-square video {
     width: 100%;
     height: 100%;
@@ -162,7 +148,7 @@ nav .nav-link:hover {
     border-radius: 20px;
 }
 
-/* Responsive fix for mobile - also 10% bigger */
+/* Responsive Video Squares */
 @media (max-width: 767px) {
     .video-square {
         height: 154px;
@@ -179,39 +165,55 @@ nav .nav-link:hover {
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-    height: 400px;
+    height: 100px;
 }
 
 /* Models Section */
 .models {
     background-color: #000000 !important;
     color: #f0f0f0 !important;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    align-items: start; 
+    padding: 40px 20px;
 }
 
-/* Cards in Models Section */
 .models .card {
+    width: 100%;
+    height: 400px; 
     background-color: #000000 !important;
     color: #f0f0f0 !important;
     border: 1px solid #444444 !important;
-    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
 }
+.models .card img,
+.models .card video {
+    width: 100%;
+    height: 300px;               
+    object-fit: cover;           
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
 
 /* Footer Section */
 footer {
     background-color: #000000 !important;
     color: #f0f0f0 !important;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
 }
 
-/* Optional: text alignment */
 .text-center {
     text-align: center;
 }
