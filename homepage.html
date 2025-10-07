@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Museum - Car Brand</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <header class="text-white p-4">
+        <div class="container d-flex justify-content-between">
+            <img src="assets/images/bmwlogo.gif" alt="BMW Logo" class="brand-logo">
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="models.html">Models</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero text-white">
+        <video autoplay muted loop class="hero-bg-video">
+          <source src="assets/videos/videoback.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container-fluid h-100 d-flex align-items-center justify-content-center">
+          <div class="row w-100 align-items-center">
+            <div class="col-md-2 d-flex flex-column align-items-center gap-4">
+              <div class="video-square">
+                <video src="assets/videos/video1.mp4" autoplay loop muted playsinline></video>
+              </div>
+              <div class="video-square">
+                <video src="assets/videos/video2.mp4" autoplay loop muted playsinline></video>
+              </div>
+            </div>
+            <div class="col-md-8 text-center">
+              <h1 class="brand-heading">BMW</h1>
+              <h2 class="welcome-text">The virtual Museum</h2>
+            </div>
+            <div class="col-md-2 d-flex flex-column align-items-center gap-4">
+              <div class="video-square">
+                <video src="assets/videos/video3.mp4" autoplay loop muted playsinline></video>
+              </div>
+              <div class="video-square">
+                <video src="assets/videos/video4.mp4" autoplay loop muted playsinline></video>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="about py-5">
+        <div class="container text-center">
+            <h2>About CarBrand</h2>
+            <p>Learn about the legacy and the history of CarBrand. From its humble beginnings to becoming a global icon.</p>
+        </div>
+    </section>
+
+    <section class="models py-5">
+        <div class="container text-center">
+            <h2>Featured Models</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="assets/images/car-model1.jpg" class="card-img-top" alt="Car Model 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Model 1</h5>
+                            <p class="card-text">A brief description of Model 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="assets/images/car-model2.jpg" class="card-img-top" alt="Car Model 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Model 2</h5>
+                            <p class="card-text">A brief description of Model 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="assets/images/car-model3.jpg" class="card-img-top" alt="Car Model 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Model 3</h5>
+                            <p class="card-text">A brief description of Model 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-white text-center py-3">
+        <p>&copy; 2025 CarBrand. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- External JavaScript File -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
